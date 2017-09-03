@@ -1,0 +1,33 @@
+* In #4, you used triple quotes for comment. Please use # for comments. Please see below for corrected code.
+~~~
+def fibonacci_generator():
+    """
+    Generate the Fibonacci sequence.
+
+    The Fibonacci sequence 1, 1, 2, 3, 5, 8, 13, 21,...
+    is defined by a1=1, a2=1, and an = a(n-1) + a(n-2).
+    """
+    a, b = 0, 1
+    while True:
+        yield a
+        # Instead of ``yeild a`` we can have ``yeild b`` also both will
+	# serve the same
+        a, b = b, a + b
+~~~
+* In #6, the dosctring should be between the ``def`` and the code, not after the code; like this:
+~~~
+def catalan_generator():
+    """
+    Generate the sequence of Catalan numbers.
+
+    For the definition of the Catalan number sequence see `OEIS <https://www.oeis.org/A000108>`.
+    """
+    n=0
+    while True:     
+        c=(factorial(2*n))/(factorial(n)*factorial(n+1))
+        yield c
+        n+=1
+~~~
+Please read the document https://www.python.org/dev/peps/pep-0257/ to understand docstrings better.
+
+**Score: 31/35 Good effort!**
