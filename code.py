@@ -91,8 +91,7 @@ def fibonacci_generator():
     a, b = 0, 1
     while True:
         yield a
-        """Instead of ``yeild a`` we can have ``yeild b`` also both will serve the same
-        """
+        #Instead of ``yeild a`` we can have ``yeild b`` also both will serve the same
         a, b = b, a + b
   
     # Hint: use the ``yield`` command.
@@ -120,18 +119,17 @@ def largest_fibonacci_before(n):
 #largest_fibonacci_before(55) == 34
 
 #6
-def catalan_generator():
-    n=0
-    while True:     
-        c=(factorial(2*n))/(factorial(n)*factorial(n+1))
-        yield c
-        n+=1
-    
+def catalan_generator():    
     """
     Generate the sequence of Catalan numbers.
 
     For the definition of the Catalan number sequence see `OEIS <https://www.oeis.org/A000108>`.
     """
+    n=0
+    while True:     
+        c=(factorial(2*n))/(factorial(n)*factorial(n+1))
+        yield c
+        n+=1
     #Your code goes here.
         
 #TEST
